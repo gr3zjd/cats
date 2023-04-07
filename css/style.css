@@ -1,194 +1,98 @@
-﻿html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-
-body {
-    line-height: 1;
-}
-
-ol, ul {
-    list-style: none;
-}
-
-blockquote, q {
-    quotes: none;
-}
-
-    blockquote:before, blockquote:after,
-    q:before, q:after {
-        content: '';
-        content: none;
-    }
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-
-
-/* roboto-regular - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-    url('../fonts/roboto-v30-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* roboto-500 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    src: url('../fonts/roboto-v30-latin-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-    url('../fonts/roboto-v30-latin-500.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* roboto-700 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/roboto-v30-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-    url('../fonts/roboto-v30-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* roboto-900 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 900;
-    src: url('../fonts/roboto-v30-latin-900.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-    url('../fonts/roboto-v30-latin-900.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-html
+﻿body
 {
-    box-sizing: border-box;
-}
-body {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
-    color: #332317;
-    max-width: 428px;
-    max-height: 762px;
-    background: #F4E8DE;
-}
 
-*, *::before, *::after 
+background: #F4E8DE;
+}
+.header
 {
-    box-sizing: inherit;
-}
-.navigation {
-    position: absolute;
-    left: 2.8%;
-    right: 91.59%;
-    top: 50%;
-}
-
-header {
-    position: absolute;
-    width: 428px;
-    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
     background: #A77C5D;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 468px;
+    height: 56px;
+    border: 1px dashed #7B61FF;
+    border-radius: 5px;
+
 }
-main {
-    position: absolute;
-    width: 428px;
-    top: 56px;
-    background: #F4E8DE;
+
+.header__left
+{   display: flex;
+    align-items: center;
+    column-gap: -4px;
+    margin-left: 16px;
+}
+.header__right
+{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.main_container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+    width: 468px;
+    height: 706px;
     margin-block-start: 24px;
+}
+
+.cat_card_box
+{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background: #F4E8DE;
+    width: 404px;
+    height: 108px;
+    border: 1px solid #A77C5D;
+    box-shadow: 0px 4px 4px #C4C4C4;
+    border-radius: 12px;
+}
+.cat_card_logo
+{
+    align-self: center;
+    display: flex;
+    column-gap: 24px;
+    margin-left: 24px;
+    
+}
+.cat_card_text
+{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px 16px;
-    gap: 12px;
 }
-
-input{
-box-sizing: border-box;
-
-/* Auto layout */
-
-
-
-width: 404px;
-height: 48px;
-
-/* Color 2 */
-
-background: #F4E8DE;
-/* Color 1 */
-
-border: 1px solid #A77C5D;
-border-radius: 8px;
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
+.cat_card_icon
+{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+    justify-content: space-between;
+    column-gap: 46px;
+    margin-top: 12px;
+    margin-right: 12px;
+    font-size: 12px;
 }
-
-
-footer {
-    position: absolute;
-    width: 428px;
-    height: 80px;
-    left: 0px;
-    top: 682px;
+.cat_card_name
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
-p.header {
-    position: absolute;
-    left: 11.21%;
-    right: 72.43%;
-    top: 25%;
-    bottom: 25%;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
-    /* Color 3 */
-
-    color: #332317;
+.cat_card_weight
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 16px;
 }
-img.header {
-    position: absolute;
-    left: 16px;
-    top: 23px;
-}
-
-
-.wrapper {
-    margin: 0 auto;
-}
-
